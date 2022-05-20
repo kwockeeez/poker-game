@@ -1,0 +1,8 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 140
+UseTab: Never
+PointerAlignment: Right
+BreakBeforeBraces: Attach
+AlignConsecutiveMacros: true
+AlignTrailingComments: true
