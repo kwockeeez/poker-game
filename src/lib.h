@@ -19,12 +19,12 @@
 
 enum eValue { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace, VALUE_COUNT };
 
-enum eSuit { Hearts, Diamonds, Clubs, Spades, SUITS_COUNT };
+enum eSuit { Hearts, Diamonds, Clubs, Spades, SUIT_COUNT };
 
 
 typedef struct Cards {
     enum eValue value;
-    enum eSuit suit;
+    enum eSuit  suit;
 } card_t;
 
 typedef struct Hand {

@@ -12,7 +12,7 @@ void display_Info(hand_t *hand) {
 void get_Random_Hand(hand_t *hand) {
     for (size_t i = 0; i < CARD_COUNT; i++) {
         hand->card[i].value = (unsigned int)random() % VALUE_COUNT;
-        hand->card[i].suit  = (unsigned int)random() % SUITS_COUNT;
+        hand->card[i].suit  = (unsigned int)random() % SUIT_COUNT;
     }
 }
 
@@ -80,14 +80,14 @@ bool is_Full_House(hand_t *hand) {
 void get_Flush(hand_t *hand) {
     for (size_t i = 0; i < CARD_COUNT; i++) {
         hand->card[i].value = (unsigned int)random() % VALUE_COUNT;
-        hand->card[i].suit = Diamonds;
+        hand->card[i].suit  = Diamonds;
     }
 }
 
 void get_Royal_Flush(hand_t *hand) {
     for (size_t i = 0; i < CARD_COUNT; i++) {
         hand->card[i].value = VALUE_COUNT - 1 - i;
-        hand->card[i].suit = Diamonds;
+        hand->card[i].suit  = Diamonds;
     }
 }
 
@@ -97,7 +97,7 @@ void get_Quads(hand_t *hand) {
             hand->card[i].value = King;
         }
         else hand->card[i].value = (unsigned int)random() % VALUE_COUNT;
-        hand->card[i].suit = (unsigned int)random() % SUITS_COUNT;
+        hand->card[i].suit = (unsigned int)random() % SUIT_COUNT;
     }
 }
 
@@ -107,6 +107,6 @@ void get_Full_House(hand_t *hand) {
             hand->card[i].value = Jack;
         }
         else hand->card[i].value = Queen;
-        hand->card[i].suit = (unsigned int)random() % SUITS_COUNT;
+        hand->card[i].suit = (unsigned int)random() % SUIT_COUNT;
     }
 }
