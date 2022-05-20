@@ -22,12 +22,12 @@ enum eValue { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen,
 enum eSuit { Hearts, Diamonds, Clubs, Spades, SUIT_COUNT };
 
 
-typedef struct Cards {
+typedef struct {
     enum eValue value;
     enum eSuit  suit;
 } card_t;
 
-typedef struct Hand {
+typedef struct {
     card_t card[CARD_COUNT];
 } hand_t;
 
